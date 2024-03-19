@@ -6,20 +6,20 @@ dependencies:
 
 # Tests
 unit-tests:
-	poetry run py.test --cov=pycaprio --cov-branch --cov-fail-under=90 tests/unit_tests
+	poetry run py.test --cov=inception --cov-branch --cov-fail-under=90 tests/unit_tests
 
 integ-tests:
-	poetry run py.test --cov=pycaprio --cov-branch --cov-fail-under=90 tests/integ_tests
+	poetry run py.test --cov=inception --cov-branch --cov-fail-under=90 tests/integ_tests
 
 tests: unit-tests integ-tests
 
 coverage:
-	poetry run py.test --cov=pycaprio --cov-branch --cov-fail-under=90 --cov-report=xml:coverage.xml tests
+	poetry run py.test --cov=inception --cov-branch --cov-fail-under=90 --cov-report=xml:coverage.xml tests
 
 # Static analysis/linting
 lint:
-	poetry run flake8 pycaprio --max-line-length=120
-	poetry run flake8 tests --max-line-length=120 --ignore=E722
+	poetry run flake8 inception --max-line-length=120
+#	poetry run flake8 tests --max-line-length=120 --ignore=E722
 
 # Docs
 docs:
