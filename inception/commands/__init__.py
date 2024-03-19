@@ -1,1 +1,1 @@
-from .project import export_projects
+from .project import export_projects # noqa
